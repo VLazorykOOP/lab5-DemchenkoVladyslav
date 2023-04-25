@@ -1,24 +1,30 @@
-﻿// OOPLab5T.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
-//
-
-
-#include <iostream>
+﻿#include <iostream>
 
 // Ваші файли загловки 
 //
-#include "Lab5Exmaple.h"
+#include "Lab5Exmaple.cpp"
 int main()
 {
-    std::cout << " Lab #5  !\n";
-    //  Код виконання завдань
-    //  Головне меню завдань
-    //  Функції та класи можуть знаходитись в інших файлах проекту
-
-    int chain = 1;
-    if (chain == 1) chain = mainExample1();
-    if (chain == 2) chain = mainExample2();
-    if (chain == 3) chain = mainExample3();
-    if (chain == 4) chain = mainExample4();
-    if (chain == 5) chain = mainExample5();
-
+	std::cout << " Lab #5  Tasks 1-2\n";
+	Engine testEngine = Engine(8.94);
+	Car testCar = Car("test car with engine", 8, 10.9, testEngine);
+	Truck testTruck = Truck("test truck with engine", 8, 10.9, testEngine, 50.01);
+	cout << "Engine object" << endl;
+	testEngine.Show();
+	cout << "Car object" << endl;
+	testCar.Show();
+	cout << "Truck object" << endl;
+	testTruck.Show();
+	cout << "Set carrying capacity for truck to 25.1" << endl;
+	testTruck.setCarryingCapacity(25.1);
+	testTruck.Show();
+	cout << endl << endl << endl << "Task 3" << endl;
+	Table t = Table();
+	cout << "New table object << overload" << endl;
+	cout << t << endl;
+	cout << "Enter 3 parameters for table (>> overload)" << endl;
+	cin >> t;
+	cout << "Table object with your parameters (<< overload)" << endl;
+	cout << t<<endl<<endl;
+	cout << "Destructors from previous tasks work: " << endl;
 }
