@@ -70,7 +70,8 @@ public:
 	}
 	void Show()
 	{
-		cout << "Mark: " << mark << endl << "Cylinders: " << cylinders << endl << "Own ower: " << carpower << endl << "Engine power: " << engine.getPower() << endl << "Carrying capacity: " << carryingCapacity << endl << endl;
+		Car::Show();
+		cout << "Carrying capacity: " << carryingCapacity << endl << endl;
 	}
 };
 class Furniture
@@ -99,6 +100,7 @@ protected:
 		width = f.width;
 		height = f.height;
 		length = f.length;
+		return *this;
 	}
 };
 

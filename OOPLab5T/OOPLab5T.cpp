@@ -25,6 +25,11 @@ int main()
 	cout << "Enter 3 parameters for table (>> overload)" << endl;
 	cin >> t;
 	cout << "Table object with your parameters (<< overload)" << endl;
-	cout << t<<endl<<endl;
+	cout << t << endl << endl;
+	Table t1 = t;
+	cout << "New table (copy of previous)";
+	cout << t1 << endl;
+	t1 = t;
+	cout << t1 << endl;
 	cout << "Destructors from previous tasks work: " << endl;
 }
